@@ -8,10 +8,12 @@
   <sprites name="sprites">
     <sprite>sprites\spr_sprite1</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_sol</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\fond__etoil__0</background>
     <background>background\fond_etoile_1</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -19,6 +21,7 @@
     <object>objects\obj_sprite2</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_variables</object>
+    <object>objects\ob_spr_sol</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
