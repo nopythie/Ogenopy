@@ -6,13 +6,16 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\spr_sprite1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\fond__etoil__0</background>
     <background>background\fond_etoile_1</background>
   </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_sprite1</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
