@@ -8,8 +8,14 @@
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\fond__etoil__0</background>
+    <background>background\fond_etoile_1</background>
+  </backgrounds>
   <paths name="paths"/>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
