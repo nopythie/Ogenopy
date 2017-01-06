@@ -7,12 +7,17 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\test_sol</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\fond__etoil__0</background>
     <background>background\fond_etoile_1</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_test_sol</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
