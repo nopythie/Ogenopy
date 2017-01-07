@@ -6,10 +6,15 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_sol</sprite>
-    <sprite>sprites\Spr_PERSO_stand</sprite>
-    <sprite>sprites\Spr_PERSO_jump</sprite>
-    <sprite>sprites\Spr_PERSO_chute</sprite>
+    <sprites name="Perso">
+      <sprite>sprites\Spr_PERSO_stand</sprite>
+      <sprite>sprites\Spr_PERSO_chute</sprite>
+      <sprite>sprites\Spr_PERSO_jump</sprite>
+    </sprites>
+    <sprites name="Collisions">
+      <sprite>sprites\spr_sol</sprite>
+      <sprite>sprites\Spr_Wall</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\fond__etoil__0</background>
@@ -20,6 +25,8 @@
   <objects name="objects">
     <object>objects\ob_spr_sol</object>
     <object>objects\Obj_PERSO</object>
+    <object>objects\Obj_Wall</object>
+    <object>objects\obj_creation_wall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
