@@ -7,6 +7,9 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_sol</sprite>
+    <sprite>sprites\Spr_PERSO_stand</sprite>
+    <sprite>sprites\Spr_PERSO_jump</sprite>
+    <sprite>sprites\Spr_PERSO_chute</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\fond__etoil__0</background>
@@ -16,6 +19,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\ob_spr_sol</object>
+    <object>objects\Obj_PERSO</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
