@@ -7,14 +7,16 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Perso">
-      <sprite>sprites\Spr_PERSO_stand</sprite>
-      <sprite>sprites\Spr_PERSO_chute</sprite>
-      <sprite>sprites\Spr_PERSO_jump</sprite>
+      <sprite>sprites\spr_perso_stand</sprite>
+      <sprite>sprites\spr_perso_chute</sprite>
+      <sprite>sprites\spr_perso_jump</sprite>
     </sprites>
     <sprites name="Collisions">
       <sprite>sprites\spr_sol</sprite>
-      <sprite>sprites\Spr_Wall</sprite>
+      <sprite>sprites\spr_wall</sprite>
     </sprites>
+    <sprite>sprites\spr_gameover</sprite>
+    <sprite>sprites\spr_retry</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\fond__etoil__0</background>
@@ -22,11 +24,17 @@
     <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\ob_spr_sol</object>
-    <object>objects\Obj_PERSO</object>
-    <object>objects\Obj_Wall</object>
+    <object>objects\obj_sol</object>
+    <object>objects\obj_perso</object>
+    <object>objects\obj_wall</object>
     <object>objects\obj_creation_wall</object>
+    <object>objects\obj_variables</object>
+    <object>objects\code_poubelle</object>
+    <object>objects\obj_retry</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
