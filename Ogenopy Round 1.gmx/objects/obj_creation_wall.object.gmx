@@ -51,7 +51,7 @@
             <string>alarm[0] = 5;
 
 var position, spread;
-position = random(400);
+position = random(300);
 spread = 100;
 
 instance_create(room_width,position - spread,obj_wall);
