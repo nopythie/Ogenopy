@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 1;
 jumps = 0;
-jumpsmax = 2;
+jumpsmax = 3;
 </string>
           </argument>
         </arguments>
@@ -50,7 +50,8 @@ jumpsmax = 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.gameover=1
+            <string>///global.gameover
+global.gameover=1
 </string>
           </argument>
         </arguments>
@@ -73,7 +74,8 @@ jumpsmax = 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.saut=0
+            <string>///global.saut
+global.saut=0
 </string>
           </argument>
         </arguments>
@@ -154,20 +156,20 @@ if global.mort=0
             <kind>1</kind>
             <string>///Collision/mort
 if global.mort=0
-{
-if place_meeting(x,y+1,obj_wall)
-{
-alarm[1]=120
-global.mort=1
-hspeed=-20
-obj_perso.sprite_index=spr_stick_chute
-if image_index=0.3
-{
-obj_perso.sprite_index=spr_stick_test
-image_speed = 2
-}
-}
-}
+    {
+        if (place_meeting(x,y+1,obj_wall) ^^ place_meeting(x,y+1,obj_wall_bas) ^^ obj_perso.y &gt; 700)
+            {
+                alarm[1]=90
+                global.mort=1
+                hspeed=-20
+                obj_perso.sprite_index=spr_stick_chute
+                if image_index=0.3
+                    {
+                        obj_perso.sprite_index=spr_stick_test
+                        image_speed = 2
+                    }
+            }
+    }
 </string>
           </argument>
         </arguments>
@@ -195,22 +197,26 @@ if global.mort=0
     {
         if global.sol=1
             {
-                image_speed=2.7;
+                image_speed=2.2;
                 obj_perso.sprite_index=spr_stick_test;
-                
-                  if image_index=2
+                if image_index=19
                     {
                         image_speed=2.3;
                     }
-                        global.saut=1
-                        vspeed =-20;
-                        alarm[0]=30;
-                        
+                  
+                global.saut=1
+                vspeed =-20;
+                alarm[0]=30;
+             
+                              
              }
          if (keyboard_check_pressed(vk_space)) 
             {
                 jumps -= 1;
-                if  (jumps = 0){global.sol=0;}
+                if  (jumps = 0)
+                    {
+                        global.sol=0;
+                    }
             } 
     }
     

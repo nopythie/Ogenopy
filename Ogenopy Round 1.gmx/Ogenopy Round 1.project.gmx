@@ -10,15 +10,19 @@
       <sprite>sprites\spr_perso_stand</sprite>
       <sprite>sprites\spr_perso_chute</sprite>
       <sprite>sprites\spr_perso_jump</sprite>
+      <sprite>sprites\spr_stick_chute</sprite>
+      <sprite>sprites\spr_stick_test</sprite>
     </sprites>
     <sprites name="Collisions">
       <sprite>sprites\spr_sol</sprite>
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_wall_bas</sprite>
     </sprites>
-    <sprite>sprites\spr_gameover</sprite>
-    <sprite>sprites\spr_retry</sprite>
-    <sprite>sprites\spr_stick_test</sprite>
-    <sprite>sprites\spr_stick_chute</sprite>
+    <sprites name="Affichage ">
+      <sprite>sprites\spr_gameover</sprite>
+      <sprite>sprites\spr_retry</sprite>
+    </sprites>
+    <sprite>sprites\spr_plateforme_d_part</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\fond__etoil__0</background>
@@ -37,6 +41,8 @@
     <object>objects\obj_variables</object>
     <object>objects\code_poubelle</object>
     <object>objects\obj_retry</object>
+    <object>objects\obj_wall_bas</object>
+    <object>objects\obj_plat_depart</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
