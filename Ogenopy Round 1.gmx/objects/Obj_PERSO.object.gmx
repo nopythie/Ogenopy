@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 1;
-jumps = 0;
-jumpsmax = 3;
 </string>
           </argument>
         </arguments>
@@ -57,30 +55,6 @@ global.gameover=1
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///global.saut
-global.saut=0
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -98,26 +72,83 @@ global.saut=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Check sol
+            <string>/// Saut avec espace
+if global.mort=0
+    {
+    if (keyboard_check_pressed(vk_space))
+        {
+        if global.jumps&gt;1
+            {
+            vspeed =-15;
+            image_speed=2.2;
+            obj_perso.sprite_index=spr_stick_test;  
+            global.jumps -= 1;
+            if global.sol=1
+                {
+                global.jumps=global.jumpsmax
+                image_speed=2.2;
+                obj_perso.sprite_index=spr_stick_test;           
+                vspeed =-15;                             
+                }
+            }
+        else
+        {
+        if (place_meeting(x, y+vspeed,obj_sol)) 
+            {
+            while (!place_meeting(x, y+sign(vspeed), obj_sol))
+                {
+                y += sign(vspeed);
+                }
+            vspeed = 0;
+            }
+
+        y += vspeed;
+        }
+        }
+    }
+
+    
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check sol + gravité
 if global.mort=0
 {
+if not(keyboard_check_pressed(vk_space)) 
+    {
     gravity = 1;
-    if global.saut=0
-        {
             if (place_meeting(x, y+1, obj_sol)) 
-        {
-            obj_perso.sprite_index=spr_stick_test;
-            image_speed=.8;
-            vspeed=0;
-            gravity=0;
-            global.sol=1;
-            jumps = jumpsmax; //compteur de sauts renitialisé(voir create event +saut)
-            vspeed = 0;
-            if (vspeed &lt; 5) 
                 {
+                obj_perso.sprite_index=spr_stick_test;
+                image_speed=.8;
+                vspeed=0;
+                gravity=0;
+                global.sol=1;
+                vspeed = 0;
+                global.jumps=global.jumpsmax
+                if (vspeed &lt; 5) 
+                    {
                     vspeed +=  1;
+                    }
                 }
-        }else
+        else
             {
                 global.sol=0;
             }
@@ -131,7 +162,7 @@ if global.mort=0
         }
 
     y += vspeed;
-        }
+    }
 }
 
 </string>
@@ -157,72 +188,26 @@ if global.mort=0
             <string>///Collision/mort
 if global.mort=0
     {
-        if (place_meeting(x,y+1,obj_wall) ^^ place_meeting(x,y+1,obj_wall_bas) ^^ obj_perso.y &gt; 700)
+        if (place_meeting(x,y+1,obj_wall) ^^ place_meeting(x,y+1,obj_wall_bas))
             {
                 alarm[1]=90
                 global.mort=1
                 hspeed=-20
                 obj_perso.sprite_index=spr_stick_chute
-                if image_index=0.3
-                    {
-                        obj_perso.sprite_index=spr_stick_test
-                        image_speed = 2
-                    }
+                image_speed=.5
+            }
+            else
+            {
+            if obj_perso.y &gt; 800
+            {
+            alarm[1]=90
+            global.mort=1
+            vspeed=-20
+            obj_perso.sprite_index=spr_stick_chute
+            image_speed=.5
+            }
             }
     }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Saut
-if global.mort=0
-    {
-        if global.sol=1
-            {
-                image_speed=2.2;
-                obj_perso.sprite_index=spr_stick_test;
-                if image_index=19
-                    {
-                        image_speed=2.3;
-                    }
-                  
-                global.saut=1
-                vspeed =-20;
-                alarm[0]=30;
-             
-                              
-             }
-         if (keyboard_check_pressed(vk_space)) 
-            {
-                jumps -= 1;
-                if  (jumps = 0)
-                    {
-                        global.sol=0;
-                    }
-            } 
-    }
-    
-    
-
-
 </string>
           </argument>
         </arguments>

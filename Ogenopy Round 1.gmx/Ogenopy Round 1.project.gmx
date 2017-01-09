@@ -39,7 +39,6 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_creation_wall</object>
     <object>objects\obj_variables</object>
-    <object>objects\code_poubelle</object>
     <object>objects\obj_retry</object>
     <object>objects\obj_wall_bas</object>
     <object>objects\obj_plat_depart</object>
