@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 image_speed = .1;
+hspeed = -15;
 </string>
           </argument>
         </arguments>

@@ -25,8 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 60;
-alarm[1] = 90;
+            <string>alarm[0] = 40;
+alarm[1] = 50;
+alarm[2] = 10;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Génération Wall Bas
+
+alarm[2] = 5;
+
+instance_create(room_width,random_range(640,746),obj_wall_bas);
 </string>
           </argument>
         </arguments>
@@ -49,7 +77,9 @@ alarm[1] = 90;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[1] = 90;
+            <string>/// Génération SOL
+
+alarm[1] = 40;
 
 instance_create(1024,random_range(480,640),obj_sol);
 
@@ -75,16 +105,13 @@ instance_create(1024,random_range(480,640),obj_sol);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Génération aléatoire des Walls
+            <string>///Génération aléatoire Wall Haut
 
-alarm[0] = 60;
 
-//var position, spread;
-//position = random(768)+150;
-//spread = 300;
+alarm[0] = 40;
 
 instance_create(room_width,random_range(128,300),obj_wall);
-instance_create(room_width,random_range(510,646),obj_wall_bas);
+
 
 
 </string>

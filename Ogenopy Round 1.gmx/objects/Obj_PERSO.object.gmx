@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 1;
+jumps=3
+jumpsmax=3
 </string>
           </argument>
         </arguments>
@@ -77,15 +79,15 @@ if global.mort=0
     {
     if (keyboard_check_pressed(vk_space))
         {
-        if global.jumps&gt;1
+        if jumps&gt;1
             {
             vspeed =-15;
             image_speed=2.2;
             obj_perso.sprite_index=spr_stick_test;  
-            global.jumps -= 1;
+            jumps -= 1;
             if global.sol=1
                 {
-                global.jumps=global.jumpsmax
+                jumps=jumpsmax
                 image_speed=2.2;
                 obj_perso.sprite_index=spr_stick_test;           
                 vspeed =-15;                             
@@ -142,7 +144,7 @@ if not(keyboard_check_pressed(vk_space))
                 gravity=0;
                 global.sol=1;
                 vspeed = 0;
-                global.jumps=global.jumpsmax
+                jumps=jumpsmax
                 if (vspeed &lt; 5) 
                     {
                     vspeed +=  1;

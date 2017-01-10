@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_perso" x="192" y="288" name="inst_6E7B7D19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_variables" x="96" y="192" name="inst_B15B7248" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_variables" x="96" y="32" name="inst_B15B7248" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_creation_wall" x="64" y="32" name="inst_4E81A359" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_depart" x="224" y="512" name="inst_EDE49F73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

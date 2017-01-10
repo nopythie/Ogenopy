@@ -31,8 +31,7 @@ global.animchute=0
 global.saut=0
 global.mort=0
 global.gameover=0
-global.jumps=3
-global.jumpsmax=3
+
 </string>
           </argument>
         </arguments>
