@@ -81,7 +81,7 @@ if global.mort=0
         {
         if jumps&gt;1
             {
-            vspeed =-13;
+            vspeed =-12;
             image_speed=2.2;
             obj_perso.sprite_index=spr_stick_test;  
             jumps -= 1;
@@ -90,7 +90,7 @@ if global.mort=0
                 jumps=jumpsmax
                 image_speed=2.2;
                 obj_perso.sprite_index=spr_stick_test;           
-                vspeed =-13;                             
+                vspeed =-12;                             
                 }
             }
         else
@@ -154,7 +154,7 @@ if not(keyboard_check_pressed(vk_space))
             {
                 global.sol=0;
             }
-    if (place_meeting(x, y+vspeed,obj_sol)) 
+                if (place_meeting(x, y+vspeed,obj_sol)) 
         {
             while (!place_meeting(x, y+sign(vspeed), obj_sol))
                 {
@@ -163,7 +163,6 @@ if not(keyboard_check_pressed(vk_space))
             vspeed = 0;
         }
 
-    y += vspeed;
     }
 }
 
@@ -210,6 +209,41 @@ if global.mort=0
             }
             }
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+                if (place_meeting(x, y+vspeed,obj_sol)) 
+        {
+            while (!place_meeting(x, y+sign(vspeed), obj_sol))
+                {
+                    y += sign(vspeed);
+                }
+            vspeed = 0;
+        }
+
+    y += vspeed;
+
+
 </string>
           </argument>
         </arguments>

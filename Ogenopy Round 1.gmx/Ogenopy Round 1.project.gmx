@@ -42,6 +42,7 @@
     <object>objects\obj_retry</object>
     <object>objects\obj_wall_bas</object>
     <object>objects\obj_plat_depart</object>
+    <object>objects\obj_score</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
