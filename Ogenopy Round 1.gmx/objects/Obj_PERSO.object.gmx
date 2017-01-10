@@ -81,7 +81,7 @@ if global.mort=0
         {
         if jumps&gt;1
             {
-            vspeed =-15;
+            vspeed =-13;
             image_speed=2.2;
             obj_perso.sprite_index=spr_stick_test;  
             jumps -= 1;
@@ -90,7 +90,7 @@ if global.mort=0
                 jumps=jumpsmax
                 image_speed=2.2;
                 obj_perso.sprite_index=spr_stick_test;           
-                vspeed =-15;                             
+                vspeed =-13;                             
                 }
             }
         else

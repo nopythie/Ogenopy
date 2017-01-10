@@ -52,7 +52,7 @@ alarm[2] = 10;
             <kind>1</kind>
             <string>/// Génération Wall Bas
 
-alarm[2] = 5;
+alarm[2] = irandom_range(1,6);
 
 instance_create(room_width,random_range(640,746),obj_wall_bas);
 </string>
@@ -79,9 +79,9 @@ instance_create(room_width,random_range(640,746),obj_wall_bas);
             <kind>1</kind>
             <string>/// Génération SOL
 
-alarm[1] = 40;
+alarm[1] = irandom_range(30,60);
 
-instance_create(1024,random_range(480,640),obj_sol);
+instance_create(1024,random_range(460,640),obj_sol);
 
 </string>
           </argument>
@@ -108,7 +108,7 @@ instance_create(1024,random_range(480,640),obj_sol);
             <string>///Génération aléatoire Wall Haut
 
 
-alarm[0] = 40;
+alarm[0] = irandom_range(30,60)
 
 instance_create(room_width,random_range(128,300),obj_wall);
 
