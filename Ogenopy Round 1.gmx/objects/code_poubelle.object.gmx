@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="6" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,40 +25,29 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///initialisation des variables
-global.sol=0
-global.animchute=0
-global.saut=0
-global.mort=0
-global.gameover=0
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Lors du Game Over
-if global.gameover=1
+            <string>    if (yprevious !=y) {
+        sprite_index = Spr_PERSO_stand;
+        image_speed = 0;
+        image_index = y&gt;yprevious;
+    }else{
+        if (xprevious !=x ) {
+            sprite_index = Spr_PERSO_jump ;
+            image_speed=.3;
+        }else{
+            sprite_index= Spr_PERSO_stand ;
+        }
+    }
+    
+    
+    
+    
+    if (place_meeting(x, y+vspeed,ob_spr_sol))
 {
-instance_create(300,400,obj_retry)
-draw_sprite(spr_gameover,0,0,0)
+    while (!place_meeting(x, y+sign(vspeed), ob_spr_sol))
+    {
+        y += sign(vspeed);
+    }
+    vspeed = 0;
 }
 </string>
           </argument>
