@@ -19,6 +19,7 @@
     <sprites name="Affichage ">
       <sprite>sprites\spr_gameover</sprite>
       <sprite>sprites\spr_retry</sprite>
+      <sprite>sprites\sprite8</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
