@@ -231,7 +231,7 @@
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>sprite8</sprite>
+            <sprite>spr_score</sprite>
           </argument>
           <argument>
             <kind>0</kind>

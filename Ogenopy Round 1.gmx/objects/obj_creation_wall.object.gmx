@@ -81,7 +81,8 @@ instance_create(room_width,random_range(640,746),obj_wall_bas);
 
 alarm[1] = irandom_range(30,60);
 
-instance_create(1024,random_range(460,640),obj_sol);
+instance_create(1350,random_range(460,600),obj_sol);
+
 
 </string>
           </argument>

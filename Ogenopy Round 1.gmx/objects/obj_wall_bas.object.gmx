@@ -48,7 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (x &lt; -60)
+            <string>///Destroy
+
+if (x &lt; -100)
 {
     instance_destroy();
 }

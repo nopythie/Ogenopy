@@ -4,23 +4,41 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_grinding</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Perso">
       <sprite>sprites\spr_stick_chute</sprite>
       <sprite>sprites\spr_stick_test</sprite>
+      <sprites name="jump">
+        <sprite>sprites\spr_stick_jump2</sprite>
+        <sprite>sprites\spr_stick_jump1</sprite>
+      </sprites>
+      <sprites name="attack">
+        <sprite>sprites\spr_stick_attack</sprite>
+      </sprites>
+      <sprite>sprites\spr_stick_riding</sprite>
+      <sprite>sprites\spr_stick_sliding</sprite>
     </sprites>
     <sprites name="Collisions">
-      <sprite>sprites\spr_sol</sprite>
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_plateforme_d_part</sprite>
       <sprite>sprites\spr_wall_bas</sprite>
+      <sprite>sprites\spr_hitBox</sprite>
+      <sprites name="sol">
+        <sprite>sprites\spr_sol1</sprite>
+        <sprite>sprites\spr_sol4</sprite>
+        <sprite>sprites\spr_sol3</sprite>
+        <sprite>sprites\spr_sol2</sprite>
+      </sprites>
     </sprites>
     <sprites name="Affichage ">
       <sprite>sprites\spr_gameover</sprite>
       <sprite>sprites\spr_retry</sprite>
-      <sprite>sprites\sprite8</sprite>
+      <sprite>sprites\spr_score</sprite>
     </sprites>
+    <sprite>sprites\palette</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\fond__etoil__0</background>
@@ -28,6 +46,13 @@
     <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_stick_running.gml</script>
+    <script>scripts\scr_stick_falling.gml</script>
+    <script>scripts\scr_stick_jumping.gml</script>
+    <script>scripts\scr_stick_death.gml</script>
+    <script>scripts\scr_stick_dashing.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
   </fonts>
@@ -44,6 +69,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_plat_depart</object>
       <object>objects\obj_creation_wall</object>
+      <object>objects\obj_plateform</object>
     </objects>
   </objects>
   <rooms name="rooms">

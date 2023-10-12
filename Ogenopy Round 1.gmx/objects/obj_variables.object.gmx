@@ -57,8 +57,8 @@ global.gameover=0
             <string>///Lors du Game Over
 if global.gameover=1
 {
-instance_create(300,400,obj_retry)
-draw_sprite(spr_gameover,0,0,0)
+    instance_create(300,400,obj_retry)
+    draw_sprite(spr_gameover,0,0,0)
 }
 </string>
           </argument>
